@@ -36,25 +36,25 @@ public class Program {
         orangeBox.addFruit(new Orange());
         orangeBox.addFruit(new Orange());
 
-        Box<Orange> orangeBox1 = new Box<>();
-        orangeBox1.addFruit(new Orange());
-        orangeBox1.addFruit(new Orange());
-        orangeBox1.addFruit(new Orange());
+        Box<Orange> orangeOtherBox = new Box<>();
+        orangeOtherBox.addFruit(new Orange());
+        orangeOtherBox.addFruit(new Orange());
+        orangeOtherBox.addFruit(new Orange());
 
         System.out.println("Вес ящика яблок: " + appleBox.getBoxWeight());
         System.out.println("Вес ящика фруктов: " + fruitBox.getBoxWeight());
-        System.out.println("Вес текущего ящика апельсинов: " + orangeBox.getBoxWeight());
-        System.out.println("Вес другого ящика апельсинов: " + orangeBox1.getBoxWeight());
+        System.out.println("Вес ящика апельсинов: " + orangeBox.getBoxWeight());
+        System.out.println("Вес другого ящика апельсинов: " + orangeOtherBox.getBoxWeight());
 
         System.out.println("Результат сравнения весов ящиков с апельсинов и с яблоками: " + (orangeBox.compare(appleBox) ? " равны" : "не равны"));
         System.out.println("Результат сравнения весов ящиков с фруктами и с яблоками: " + (fruitBox.compare(appleBox) ? " равны" : "не равны"));
 
-        orangeBox.transferFruitsTo(orangeBox1);
-        System.out.println("Пересыпаем апельсины из текущего ящика в другой ящик");
+        orangeBox.transferFruitsTo(orangeOtherBox);
+        System.out.println("Пересыпаем апельсины из ящика в другой ящик");
 
 
-        System.out.println("Вес текущего ящика апельсинов: " + orangeBox.getBoxWeight());
-        System.out.println("Вес другого ящика апельсинов: " + orangeBox1.getBoxWeight());
+        System.out.println("Вес ящика апельсинов: " + orangeBox.getBoxWeight());
+        System.out.println("Вес другого ящика апельсинов: " + orangeOtherBox.getBoxWeight());
 
     }
 
